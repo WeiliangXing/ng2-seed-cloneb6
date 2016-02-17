@@ -1,0 +1,37 @@
+<h1>This is my new Component</h1>
+<p>
+  Name: {{name}}
+</p>
+<input type="text" #inputtext>
+<!-- <input type="text" #textValue (click)="logOut(textValue.value)"> -->
+<!-- event binding -->
+<button type="button" (click)="logOut(inputtext.value)">Click Here</button>
+<button type="button" (dblclick)="logOut(inputtext.value)">Double Click Here</button>
+<button type="button" (mouseover)="logOut(inputtext.value)">Double Click Here</button>
+<ul>
+  <li *ngFor="#employee of employees, #i = index">{{i}} {{employee}}</li>
+</ul>
+<input type="text" #ref (keyup)="onKeyup()">
+<br>
+<!-- property binding -->
+<p [style.color]="ref.value" [style.backgroundColor]="ref.value">
+  This is the text:
+</p>
+
+<p>
+  hello world
+</p>
+
+<!-- two way binding:  first name pass to [] property binding; then go to () event binding;-->
+<input type="text" [(ngModel)]="name">
+<p>
+  {{name}}
+</p>
+
+<button type="button" (click)="toggle()">Toggle</button>
+<p *ngIf="judge">
+  This is Dynamic conditions !
+</p>
+<p>
+  hello
+</p>
