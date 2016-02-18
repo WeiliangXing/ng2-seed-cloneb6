@@ -1,5 +1,7 @@
 import {Component} from 'angular2/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
+//CORE_DIRECTIVES is optional
+// import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
+import {FORM_DIRECTIVES} from 'angular2/common';
 
 import {NameList} from '../../shared/services/name_list';
 
@@ -7,7 +9,7 @@ import {NameList} from '../../shared/services/name_list';
   selector: 'about',
   moduleId: module.id,
   templateUrl: './about.html',
-  directives: [FORM_DIRECTIVES, CORE_DIRECTIVES]
+  directives: [FORM_DIRECTIVES]
 })
 export class AboutCmp {
   newName: string;
